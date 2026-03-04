@@ -1,0 +1,13 @@
+# render.yaml — Render deployment configuration
+
+services:
+  - type: web
+    name: image-search-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: singapore          # closest to Kolkata
+    envVars:
+      - key: PORT
+        value: 8000
+    healthCheckPath: /health
