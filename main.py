@@ -44,7 +44,18 @@ async def lifespan(app: FastAPI):
     pw = await async_playwright().start()
     _browser = await pw.chromium.launch(
         headless=True,
-        args=["--no-sandbox", "--disable-setuid-sandbox"],
+        args=[
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",      # prevent OOM on Render free tier
+            "--disable-gpu",
+            "--single-process",             # lower memory footprint
+            "--no-zygote",
+            "--disable-extensions",
+            "--disable-background-networking",
+            "--disable-default-apps",
+            "--mute-audio",
+        ],
     )
     print("✅  Chromium browser started.")
     yield
