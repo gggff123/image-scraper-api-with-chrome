@@ -116,7 +116,7 @@ Once running, visit:
 - **ReDoc** → http://localhost:8000/redoc
 
 ---
-##Works on 
+## Works on 
 - **Linux**
 - **Windows**
 ## ⚠️ Notes
@@ -128,7 +128,7 @@ Once running, visit:
 ---
 ## Api Limited under time Uploaded on render
 **visit**
-- https://image-scraper-api-with-chrome.onrender.com/docs to get info about the /u api/u
+- https://image-scraper-api-with-chrome.onrender.com/docs to get info about the <u> API </u>
 ## 📄 License
 
 MIT — free to use, modify, and distribute.
